@@ -1,7 +1,6 @@
 import {Box, BoxProps, ButtonGroup, Center, Divider, IconButton, keyframes, Stack, Text, VStack} from '@chakra-ui/react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faFacebook, faInstagram, faXTwitter} from "@fortawesome/free-brands-svg-icons"
-import {faHeart} from "@fortawesome/free-solid-svg-icons";
 import {Logo} from "@/components/Logo";
 import React from "react";
 import moment from "moment";
@@ -26,27 +25,12 @@ export const Footer = (props: BoxProps) => {
     },
   ]
 
-  const animationBg = keyframes`
-    0% {
-      background-position: 0 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0 50%;
-    }
-  `;
-
   return (
     <Box
       as="footer"
       role="contentinfo"
       px={{base: '8'}}
-      bgGradient="linear(to-r, gray.900, blue.900, blue.800, blue.600, purple.900)"
-      bgSize={"200% 200%"}
-      animation={`${animationBg} 10s ease infinite`}
-      {...props}
+      bgGradient={"radial-gradient(circle, rgba(247, 219, 24, 1) 0%, rgba(223, 132, 25, 1) 70%, rgba(161, 39, 51, 1) 95%)"}
       py={5}
       pb={5}
     >
@@ -58,11 +42,11 @@ export const Footer = (props: BoxProps) => {
           py={{base: '0', md: '2'}}
         >
           <Center justifyContent={"space-between"}> 
-            <Logo width="60%"/>
+            <Logo width="20%"/>
           </Center>
           <VStack>
             <Text fontSize="md" color="white">
-              &copy; {moment().format("YYYY")} Iglesia Cristiana de Pachuca
+              &copy; {moment().format("YYYY")} Iglesia Cristiana Bautista Pueblo de Dios
             </Text>
             <ButtonGroup variant="ghost">
               {

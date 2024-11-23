@@ -11,9 +11,6 @@ const images = [
   "https://via.placeholder.com/400x600",
   "https://via.placeholder.com/600x600",
   "https://via.placeholder.com/1200x800",
-  "https://via.placeholder.com/400x500",
-  "https://via.placeholder.com/400x200",
-  "https://via.placeholder.com/500x500",
 ];
 
 const breakpointColumnsObj = {

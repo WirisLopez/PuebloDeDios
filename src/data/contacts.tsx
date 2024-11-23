@@ -1,6 +1,6 @@
 import {Contact} from "@/interfaces/Contact";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faXTwitter, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons"
+import {faXTwitter, faInstagram, faFacebook, faWhatsapp} from "@fortawesome/free-brands-svg-icons"
 import {faEnvelope, faPhone} from "@fortawesome/free-solid-svg-icons"
 
 export const contacts: Contact[] = [
@@ -11,13 +11,13 @@ export const contacts: Contact[] = [
     icon: <FontAwesomeIcon icon={faFacebook}/>,
     type: 1
   },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/",
-    contact: "Iglesia Cristiana de Pachuca",
-    icon: <FontAwesomeIcon icon={faXTwitter}/>,
-    type: 1
-  },
+  // {
+  //   name: "Twitter",
+  //   url: "https://twitter.com/",
+  //   contact: "Iglesia Cristiana de Pachuca",
+  //   icon: <FontAwesomeIcon icon={faXTwitter}/>,
+  //   type: 1
+  // },
   {
     name: "Instagram",
     url: "https://www.instagram.com",
@@ -33,16 +33,16 @@ export const contacts: Contact[] = [
   // },
   {
     name: "Pastor David Taboada García",
-    url: "tel:+52 771 123 4567",
-    contact: "+52 771 123 4567",
-    icon: <FontAwesomeIcon icon={faPhone}/>,
+    url: "tel:+52 55 1608 3959",
+    contact: "+52 55 1608 3959",
+    icon: <FontAwesomeIcon icon={faWhatsapp}/>,
     type: 2
   },
-  {
-    name: "Copastor ",
-    url: "tel:+52 771 123 4567",
-    contact: "+52 771 123 4567",
-    icon: <FontAwesomeIcon icon={faPhone}/>,
-    type: 2
-  }
+  // {
+  //   name: "Copastor ",
+  //   url: "tel:+52 771 123 4567",
+  //   contact: "+52 771 123 4567",
+  //   icon: <FontAwesomeIcon icon={faPhone}/>,
+  //   type: 2
+  // }
 ]

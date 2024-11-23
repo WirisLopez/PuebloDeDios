@@ -11,17 +11,6 @@ interface Props {
 }
 
 export const NavbarMobile = ({ isOpen, onClose, pages, handleClickNav }: Props) => {
-  const animationBg = keyframes`
-    0% {
-      background-position: 0 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0 50%;
-    }
-  `;
 
   const handleNavClick = async (url: string) => {
     console.log('Navigating to:', url);
@@ -33,24 +22,14 @@ export const NavbarMobile = ({ isOpen, onClose, pages, handleClickNav }: Props) 
   return (
     <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
       <DrawerOverlay />
-      <DrawerContent>
+      <DrawerContent bgGradient={"radial-gradient(circle, rgba(247, 219, 24, 1) 0%, rgba(223, 132, 25, 1) 70%, rgba(161, 39, 51, 1) 95%)"}>
         <DrawerCloseButton color={"white"}/>
-        <DrawerHeader
-          bgGradient="linear(to-r, gray.900, blue.900, blue.800, blue.600, purple.900)"
-          bgSize={"200% 200%"}
-          animation={`${animationBg} 10s ease infinite`}
-        >
+        <DrawerHeader>
           <Center>
-            <Heading>
-              <Logo />
-            </Heading>
+            <Logo width="30%"/>
           </Center>
         </DrawerHeader>
-        <DrawerBody
-          bgGradient="linear(to-r, gray.900, blue.900, blue.800, blue.600, purple.900)"
-          bgSize={"200% 200%"}
-          animation={`${animationBg} 10s ease infinite`}
-        >
+        <DrawerBody>
           <SimpleGrid columns={1} spacing={8} py={5} alignItems={"left"}>
             {pages.map((page, index) => (
               <NavbarItem
